@@ -1,3 +1,4 @@
+package org.upgrad.controllers;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
