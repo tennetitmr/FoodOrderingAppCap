@@ -4,7 +4,7 @@ import org.upgrad.models.Item;
 
 import java.util.Set;
 
-/*
+/* author: Mohan
  * CategoryResponse  class contain all the attributes that are to be returned as a response.
  * Here getter, setter and constructor are defined for this response class.
  */
