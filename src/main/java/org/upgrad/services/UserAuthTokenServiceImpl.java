@@ -22,25 +22,30 @@ public class UserAuthTokenServiceImpl implements UserAuthTokenService {
         this.userRepository = userRepository;
     }
 
-    // This method is used to add access token details in the database
+    // This method is used to add access token details to the table.
     @Override
     public void addAccessToken(Integer userId, String accessToken) {
         Optional<User> user = userRepository.findById(userId);
-        Date date =new Date();
-        UserAuthToken userAuthToken = new UserAuthToken(user.get(),accessToken,date);
+        Date date = new Date();
+        UserAuthToken userAuthToken = new UserAuthToken(user.get(), accessToken, date);
         userAuthTokenRepository.save(userAuthToken);
     }
 
-    // This method is used to remove access token from the database. By remove, it means making the access token no longer viable
+    // This method is used to remove access token from the database.
     @Override
     public void removeAccessToken(String accessToken) {
         userAuthTokenRepository.removeAuthToken(accessToken);
     }
 
-    // This method is used to check whether the user is logged in or not
+    // This method is used to check if the user is logged in or not
     @Override
     public UserAuthToken isUserLoggedIn(String accessToken) {
         return userAuthTokenRepository.isUserLoggedIn(accessToken);
     }
+
+    public int getUserId(String accessToken) {
+        return userAuthTokenRepository.getUserId(accessToken);
+    }
+
 
 }
