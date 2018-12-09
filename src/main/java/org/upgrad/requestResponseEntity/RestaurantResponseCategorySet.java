@@ -4,7 +4,7 @@ import org.upgrad.models.Address;
 
 import java.util.Set;
 
-/*
+/*  
  * RestaurantResponseCategorySet class contain all the attributes that are to be returned as a response.
  * Here getter, setter and constructor are defined for this response class.
  */
