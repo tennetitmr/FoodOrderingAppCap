@@ -1,15 +1,17 @@
 package org.upgrad.requestResponseEntity;
 
-/*
+/* author: mohan
  * ItemQuantity  class contain contains the attributes itemId and its corresponding quantity. It will be used to take request during saving any order details.
  * Here getter, setter and constructor are defined for this request class.
  */
+
 public class ItemQuantity {
 
     private Integer itemId;
     private Integer quantity;
 
-    public ItemQuantity(){}
+    public ItemQuantity() {
+    }
 
     public ItemQuantity(Integer itemId, Integer quantity) {
         this.itemId = itemId;
